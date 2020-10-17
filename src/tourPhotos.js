@@ -185,7 +185,7 @@ class tourPhotos extends Component {
       });
     const imageGrid = (itemData) => {
       const photo = itemData.item.photo.map((item) => (
-        <View>
+        <View style={styles.screen}>
           <Text>{item.url}</Text>
           <Image style={styles.logo} source={{uri: item.uri}} />
         </View>
@@ -209,6 +209,11 @@ const styles = StyleSheet.create({
   logo: {
     width: '90%',
     height: 240,
+  },
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 export default tourPhotos;

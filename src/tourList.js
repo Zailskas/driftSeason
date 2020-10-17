@@ -177,7 +177,6 @@ class tourList extends Component {
   }
 
   render() {
-    const text = this.props.route.params.text;
     const renderTourItem = (itemData) => {
       return (
         <View>
@@ -188,7 +187,7 @@ class tourList extends Component {
               })
             }
             style={styles.gridItem}>
-            <Text style={styles.appButtonContainer}>{itemData.item.tour}</Text>
+            <Text style={styles.appButtonText}>{itemData.item.tour}</Text>
           </TouchableOpacity>
         </View>
       );
